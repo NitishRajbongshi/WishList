@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { wishItem } from '../shared/modules/wishItem';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,5 +11,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  items : wishItem[] = [
+    new wishItem('Learn Angular'),
+    new wishItem('Get Coffee', true),
+    new wishItem('Find some water')
+  ];
   title = 'wishlist';
 }
